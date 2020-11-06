@@ -13,6 +13,8 @@
 		6F38B4E825553C7B002AD957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F38B4E625553C7B002AD957 /* Main.storyboard */; };
 		6F38B4EA25553C80002AD957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F38B4E925553C80002AD957 /* Assets.xcassets */; };
 		6F38B4ED25553C80002AD957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F38B4EB25553C80002AD957 /* LaunchScreen.storyboard */; };
+		6F38B4F6255540B3002AD957 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38B4F5255540B3002AD957 /* DataManager.swift */; };
+		6F38B4FE2555436C002AD957 /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38B4FD2555436C002AD957 /* PlanetModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		6F38B4E925553C80002AD957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F38B4EC25553C80002AD957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F38B4EE25553C80002AD957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F38B4F5255540B3002AD957 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6F38B4FD2555436C002AD957 /* PlanetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,8 @@
 		6F38B4D425553C7A002AD957 = {
 			isa = PBXGroup;
 			children = (
+				6F38B4FD2555436C002AD957 /* PlanetModel.swift */,
+				6F38B4F5255540B3002AD957 /* DataManager.swift */,
 				6F38B4DF25553C7A002AD957 /* solarSystem */,
 				6F38B4DE25553C7A002AD957 /* Products */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F38B4FE2555436C002AD957 /* PlanetModel.swift in Sources */,
 				6F38B4E525553C7A002AD957 /* ViewController.swift in Sources */,
+				6F38B4F6255540B3002AD957 /* DataManager.swift in Sources */,
 				6F38B4E125553C7A002AD957 /* AppDelegate.swift in Sources */,
 				6F38B4E325553C7A002AD957 /* SceneDelegate.swift in Sources */,
 			);
