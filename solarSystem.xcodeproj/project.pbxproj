@@ -44,8 +44,6 @@
 		6F38B4D425553C7A002AD957 = {
 			isa = PBXGroup;
 			children = (
-				6F38B4FD2555436C002AD957 /* PlanetModel.swift */,
-				6F38B4F5255540B3002AD957 /* DataManager.swift */,
 				6F38B4DF25553C7A002AD957 /* solarSystem */,
 				6F38B4DE25553C7A002AD957 /* Products */,
 			);
@@ -62,6 +60,8 @@
 		6F38B4DF25553C7A002AD957 /* solarSystem */ = {
 			isa = PBXGroup;
 			children = (
+				6F38B4FD2555436C002AD957 /* PlanetModel.swift */,
+				6F38B4F5255540B3002AD957 /* DataManager.swift */,
 				6F38B4E025553C7A002AD957 /* AppDelegate.swift */,
 				6F38B4E225553C7A002AD957 /* SceneDelegate.swift */,
 				6F38B4E425553C7A002AD957 /* ViewController.swift */,

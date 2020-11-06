@@ -8,9 +8,9 @@
 struct Planet {
     
     let name: String
-    let mass: Int
-    let radius: Int
-    let distanceToSun: Int
+    let mass: Double
+    let radius: Double
+    let distanceToSun: Double
     let numberOfSatellite: Int
     
     func getPlanets() -> [Planet] {
@@ -24,7 +24,11 @@ struct Planet {
       
         var planets = [Planet]()
         for index in 0..<names.count {
-            planets.append(Planet(name: names[index], mass: mass[index], radius: radius[index], distanceToSun: distanceToSun[index], numberOfSatellite: numberOfSatellite[index]))
+            planets.append(Planet(name: names[index],
+                                  mass: mass[index],
+                                  radius: radius[index],
+                                  distanceToSun: distanceToSun[index],
+                                  numberOfSatellite: numberOfSatellite[index]))
         }
         return planets
     }
