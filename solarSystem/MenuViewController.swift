@@ -24,6 +24,20 @@ class MenuViewController: UIViewController {
         minigamesButton.layer.cornerRadius = 10
         exitButton.layer.cornerRadius = 10
         
-        
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let tabBarController = segue.destination as! UITabBarController
+//        let aboutVC = tabBarController.viewControllers?.first as! AboutSystemViewController
+//        let minigamesVC = tabBarController.viewControllers?.last as! MiniGamesViewController
+//
+//    }
+    
+    @IBAction func aboutButtonPressed() {
+        performSegue(withIdentifier: "show1", sender: nil)
+    }
+    
+    @IBAction func minigamesButtonPressed() {
+        performSegue(withIdentifier: "show2", sender: nil)
     }
 }

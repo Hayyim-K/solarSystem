@@ -155,6 +155,10 @@
                                         <state key="normal" title="Почитать о солнечной системе">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="aboutButtonPressed" destination="3MS-sN-gLJ" eventType="touchUpInside" id="lKU-BZ-yCq"/>
+                                            <segue destination="H8N-1Q-EdO" kind="showDetail" identifier="show1" id="uZH-HP-Zcv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUt-xc-4hK">
                                         <rect key="frame" x="93.5" y="86" width="156" height="30"/>
@@ -162,6 +166,10 @@
                                         <state key="normal" title="Сыграть в мини-игры">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="minigamesButtonPressed" destination="3MS-sN-gLJ" eventType="touchUpInside" id="ujL-cz-zqg"/>
+                                            <segue destination="H8N-1Q-EdO" kind="show" id="xbX-id-NOS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -205,12 +213,69 @@
             </objects>
             <point key="canvasLocation" x="757.60000000000002" y="109.29535232383809"/>
         </scene>
+        <!--Мини-игры-->
+        <scene sceneID="LvU-T1-Nhm">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Fvc-BB-w4F" customClass="MiniGamesViewController" customModule="solarSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gNX-vy-qP5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CyL-PK-giO"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Мини-игры" id="F7w-yR-lR9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQT-SU-UqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2374" y="460"/>
+        </scene>
+        <!--О системе-->
+        <scene sceneID="k6H-SX-gbQ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="jYV-MA-Yhj" customClass="AboutSystemViewController" customModule="solarSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PBB-6B-ro9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7VX-br-ONc"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="О системе" id="y0p-Po-k6Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SeG-1j-IGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2374" y="-234"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="M8Y-GB-lCU">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="H8N-1Q-EdO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bEK-yH-dFf"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Mi-aU-iZH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jYV-MA-Yhj" kind="relationship" relationship="viewControllers" id="cOn-Nq-t1u"/>
+                        <segue destination="Fvc-BB-w4F" kind="relationship" relationship="viewControllers" id="MCe-oC-y3w"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PxK-us-hst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="109"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xbX-id-NOS"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="firstViewImage" width="1085" height="746"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -21,11 +21,11 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
      }
     
     @IBAction func passButtonTapped() {
-        showAlert(title: "Неверный пароль", message: "Твой пароль: \(userData.password)")
+        showAlert(title: "Забыл пароль?", message: "Твой пароль: \(userData.password)")
     }
     
     @IBAction func nameButtonTapped() {
-        showAlert(title: "Неверное имя", message: "Твоё имя: \(userData.username)")
+        showAlert(title: "Забыл имя?", message: "Твоё имя: \(userData.username)")
     }
     
     @IBAction func enterButtonPressed() {
