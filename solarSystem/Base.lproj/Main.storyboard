@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zr9-B3-bFa">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,11 +9,115 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="R7h-99-Jeo">
+            <objects>
+                <viewController id="zr9-B3-bFa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1lf-OZ-QvB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar System" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEA-v4-hWx">
+                                <rect key="frame" x="101" y="42" width="172.5" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="mKu-re-Qfa">
+                                <rect key="frame" x="16" y="269" width="343" height="224"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Z5N-Bn-kSM">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="129"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username here!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49A-wB-8Zg">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your pass here!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-YE-R8l">
+                                                <rect key="frame" x="0.0" y="95" width="343" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="158" translatesAutoresizingMaskIntoConstraints="NO" id="qSO-zS-6Ds">
+                                        <rect key="frame" x="0.0" y="192" width="343" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB2-gO-VGX">
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="32"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                                <state key="normal" title="Forgot Pass?">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gj-UM-fKs">
+                                                <rect key="frame" x="255" y="0.0" width="88" height="32"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                                <state key="normal" title="Forgot name?">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rES-Bs-jc4">
+                                <rect key="frame" x="152" y="517" width="71" height="48"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
+                                <state key="normal" title="Enjoy!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstViewImage" translatesAutoresizingMaskIntoConstraints="NO" id="EgS-jN-oaR">
+                                <rect key="frame" x="0.0" y="89" width="375" height="164"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AOA-jE-Nz4"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="EgS-jN-oaR" firstAttribute="leading" secondItem="AOA-jE-Nz4" secondAttribute="leading" id="0OP-RY-tuw"/>
+                            <constraint firstItem="rES-Bs-jc4" firstAttribute="top" secondItem="mKu-re-Qfa" secondAttribute="bottom" constant="24" id="1Ym-Fy-wwD"/>
+                            <constraint firstItem="mKu-re-Qfa" firstAttribute="top" secondItem="EgS-jN-oaR" secondAttribute="bottom" constant="16" id="39f-do-Xve"/>
+                            <constraint firstItem="AOA-jE-Nz4" firstAttribute="trailing" secondItem="rES-Bs-jc4" secondAttribute="trailing" constant="152" id="4F4-PC-pCt"/>
+                            <constraint firstItem="BEA-v4-hWx" firstAttribute="leading" secondItem="AOA-jE-Nz4" secondAttribute="leading" constant="101" id="Jil-TE-EeD"/>
+                            <constraint firstItem="rES-Bs-jc4" firstAttribute="leading" secondItem="AOA-jE-Nz4" secondAttribute="leading" constant="152" id="MlI-2R-MVZ"/>
+                            <constraint firstItem="EgS-jN-oaR" firstAttribute="trailing" secondItem="AOA-jE-Nz4" secondAttribute="trailing" id="Wux-GF-9Q3"/>
+                            <constraint firstItem="EgS-jN-oaR" firstAttribute="top" secondItem="BEA-v4-hWx" secondAttribute="bottom" constant="8" symbolic="YES" id="YEA-jQ-bEN"/>
+                            <constraint firstItem="AOA-jE-Nz4" firstAttribute="trailing" secondItem="BEA-v4-hWx" secondAttribute="trailing" constant="101.5" id="boD-4V-5f2"/>
+                            <constraint firstItem="mKu-re-Qfa" firstAttribute="top" secondItem="BEA-v4-hWx" secondAttribute="bottom" constant="188" id="olq-aw-mwQ"/>
+                            <constraint firstItem="mKu-re-Qfa" firstAttribute="leading" secondItem="AOA-jE-Nz4" secondAttribute="leading" constant="16" id="p5Q-zd-Bub"/>
+                            <constraint firstItem="AOA-jE-Nz4" firstAttribute="trailing" secondItem="mKu-re-Qfa" secondAttribute="trailing" constant="16" id="wDr-aP-R1G"/>
+                            <constraint firstItem="BEA-v4-hWx" firstAttribute="top" secondItem="AOA-jE-Nz4" secondAttribute="top" constant="42" id="yx8-Sc-lqB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0x-cp-NsK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="109.29535232383809"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bue-5d-k9P">
+            <objects>
+                <viewController id="3MS-sN-gLJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yYL-bC-xXP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zag-U3-cjw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47b-nk-G3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="110"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="solarSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="solar-system" translatesAutoresizingMaskIntoConstraints="NO" id="PwK-yX-OUl">
@@ -27,11 +131,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="77.678571428571431"/>
+            <point key="canvasLocation" x="1550" y="109"/>
         </scene>
     </scenes>
     <resources>
+        <image name="firstViewImage" width="1085" height="746"/>
         <image name="solar-system" width="1080" height="1920"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
