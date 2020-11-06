@@ -16,6 +16,8 @@
 		6F38B4F6255540B3002AD957 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38B4F5255540B3002AD957 /* DataManager.swift */; };
 		6F38B4FE2555436C002AD957 /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38B4FD2555436C002AD957 /* PlanetModel.swift */; };
 		AB6CFE342555740400A82104 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CFE332555740400A82104 /* UserData.swift */; };
+		AB6CFE3825557E4B00A82104 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CFE3725557E4B00A82104 /* AuthorizationViewController.swift */; };
+		AB6CFE3B2555833000A82104 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CFE3A2555833000A82104 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		6F38B4F5255540B3002AD957 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6F38B4FD2555436C002AD957 /* PlanetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
 		AB6CFE332555740400A82104 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		AB6CFE3725557E4B00A82104 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		AB6CFE3A2555833000A82104 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +72,9 @@
 				6F38B4E025553C7A002AD957 /* AppDelegate.swift */,
 				6F38B4E225553C7A002AD957 /* SceneDelegate.swift */,
 				6F38B4E425553C7A002AD957 /* ViewController.swift */,
+				AB6CFE3725557E4B00A82104 /* AuthorizationViewController.swift */,
 				6F38B4E625553C7B002AD957 /* Main.storyboard */,
+				AB6CFE3A2555833000A82104 /* MenuViewController.swift */,
 				6F38B4E925553C80002AD957 /* Assets.xcassets */,
 				6F38B4EB25553C80002AD957 /* LaunchScreen.storyboard */,
 				6F38B4EE25553C80002AD957 /* Info.plist */,
@@ -146,12 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6CFE3825557E4B00A82104 /* AuthorizationViewController.swift in Sources */,
 				AB6CFE342555740400A82104 /* UserData.swift in Sources */,
 				6F38B4FE2555436C002AD957 /* PlanetModel.swift in Sources */,
 				6F38B4E525553C7A002AD957 /* ViewController.swift in Sources */,
 				6F38B4F6255540B3002AD957 /* DataManager.swift in Sources */,
 				6F38B4E125553C7A002AD957 /* AppDelegate.swift in Sources */,
 				6F38B4E325553C7A002AD957 /* SceneDelegate.swift in Sources */,
+				AB6CFE3B2555833000A82104 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

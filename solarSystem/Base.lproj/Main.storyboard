@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Authorization View Controller-->
         <scene sceneID="R7h-99-Jeo">
             <objects>
-                <viewController id="zr9-B3-bFa" sceneMemberID="viewController">
+                <viewController id="zr9-B3-bFa" customClass="AuthorizationViewController" customModule="solarSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1lf-OZ-QvB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,36 +28,48 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Z5N-Bn-kSM">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="129"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username here!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49A-wB-8Zg">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите имя пользователя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49A-wB-8Zg">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="zr9-B3-bFa" id="Eer-b3-V8L"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your pass here!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-YE-R8l">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-YE-R8l">
                                                 <rect key="frame" x="0.0" y="95" width="343" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="zr9-B3-bFa" id="z77-uH-bVZ"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="158" translatesAutoresizingMaskIntoConstraints="NO" id="qSO-zS-6Ds">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="qSO-zS-6Ds">
                                         <rect key="frame" x="0.0" y="192" width="343" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB2-gO-VGX">
-                                                <rect key="frame" x="0.0" y="0.0" width="97" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="32"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
-                                                <state key="normal" title="Forgot Pass?">
+                                                <state key="normal" title="Вспомнить пароль">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="passButtonTapped" destination="zr9-B3-bFa" eventType="touchUpInside" id="YQE-aJ-BHf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gj-UM-fKs">
-                                                <rect key="frame" x="255" y="0.0" width="88" height="32"/>
+                                                <rect key="frame" x="231" y="0.0" width="112" height="32"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
-                                                <state key="normal" title="Forgot name?">
+                                                <state key="normal" title="Вспомнить имя">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nameButtonTapped" destination="zr9-B3-bFa" eventType="touchUpInside" id="hah-RI-3Oa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -66,13 +78,26 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rES-Bs-jc4">
                                 <rect key="frame" x="152" y="517" width="71" height="48"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
-                                <state key="normal" title="Enjoy!">
+                                <state key="normal" title="Вход">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="enterButtonPressed" destination="zr9-B3-bFa" eventType="touchUpInside" id="wlW-td-VDT"/>
+                                    <segue destination="3MS-sN-gLJ" kind="presentation" identifier="menu" id="jMB-kV-OV4"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstViewImage" translatesAutoresizingMaskIntoConstraints="NO" id="EgS-jN-oaR">
                                 <rect key="frame" x="0.0" y="89" width="375" height="164"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOr-0g-nJq">
+                                <rect key="frame" x="21" y="599" width="36" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="person.3.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="aboutButtonPressed" destination="zr9-B3-bFa" eventType="touchUpInside" id="uxl-DJ-TrY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AOA-jE-Nz4"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
@@ -92,56 +117,100 @@
                             <constraint firstItem="BEA-v4-hWx" firstAttribute="top" secondItem="AOA-jE-Nz4" secondAttribute="top" constant="42" id="yx8-Sc-lqB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="AcP-YE-R8l" id="IlM-7X-Bgi"/>
+                        <outlet property="userTextField" destination="49A-wB-8Zg" id="1ef-M5-qyO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0x-cp-NsK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23.199999999999999" y="109.29535232383809"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="bue-5d-k9P">
             <objects>
-                <viewController id="3MS-sN-gLJ" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="3MS-sN-gLJ" customClass="MenuViewController" customModule="solarSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yYL-bC-xXP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1K-MC-6Q2">
+                                <rect key="frame" x="16" y="34" width="343" height="26"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чем же можно заняться?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPp-nP-NZn">
+                                <rect key="frame" x="45" y="150" width="284.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="SXJ-tB-Jds">
+                                <rect key="frame" x="16" y="300.5" width="343" height="116"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-6v-luW">
+                                        <rect key="frame" x="59" y="0.0" width="225" height="30"/>
+                                        <color key="backgroundColor" red="0.19431833063171655" green="0.26258659251277289" blue="0.6876619170984456" alpha="0.61762764084507038" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Почитать о солнечной системе">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUt-xc-4hK">
+                                        <rect key="frame" x="93.5" y="86" width="156" height="30"/>
+                                        <color key="backgroundColor" red="0.19431833060000001" green="0.26258659249999999" blue="0.68766191710000002" alpha="0.61762764079999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Сыграть в мини-игры">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wd-RZ-4Fc">
+                                <rect key="frame" x="148.5" y="560" width="78" height="45"/>
+                                <color key="backgroundColor" red="0.1177210378" green="0.1518603781" blue="0.39469316710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Выйти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="23Y-89-UVE" kind="unwind" unwindAction="backSegueWithSegue:" id="RsP-qX-IxZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zag-U3-cjw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zag-U3-cjw" firstAttribute="trailing" secondItem="X1K-MC-6Q2" secondAttribute="trailing" constant="16" id="2pV-ha-sH3"/>
+                            <constraint firstItem="sPp-nP-NZn" firstAttribute="leading" secondItem="zag-U3-cjw" secondAttribute="leading" constant="45" id="96V-Zf-eiO"/>
+                            <constraint firstItem="zag-U3-cjw" firstAttribute="trailing" secondItem="sPp-nP-NZn" secondAttribute="trailing" constant="45.5" id="9yh-di-f9y"/>
+                            <constraint firstItem="SXJ-tB-Jds" firstAttribute="top" secondItem="sPp-nP-NZn" secondAttribute="bottom" constant="119" id="KHb-hh-bs4"/>
+                            <constraint firstItem="4wd-RZ-4Fc" firstAttribute="centerX" secondItem="zag-U3-cjw" secondAttribute="centerX" id="MBp-1f-RKy"/>
+                            <constraint firstItem="X1K-MC-6Q2" firstAttribute="leading" secondItem="zag-U3-cjw" secondAttribute="leading" constant="16" id="P2g-q7-Phm"/>
+                            <constraint firstItem="zag-U3-cjw" firstAttribute="bottom" secondItem="4wd-RZ-4Fc" secondAttribute="bottom" constant="62" id="SGE-J1-u7S"/>
+                            <constraint firstItem="SXJ-tB-Jds" firstAttribute="leading" secondItem="zag-U3-cjw" secondAttribute="leading" constant="16" id="bTE-wR-aSV"/>
+                            <constraint firstItem="zag-U3-cjw" firstAttribute="trailing" secondItem="SXJ-tB-Jds" secondAttribute="trailing" constant="16" id="eAI-dH-zRo"/>
+                            <constraint firstItem="X1K-MC-6Q2" firstAttribute="top" secondItem="zag-U3-cjw" secondAttribute="top" constant="34" id="pW4-e1-iYN"/>
+                            <constraint firstItem="sPp-nP-NZn" firstAttribute="top" secondItem="X1K-MC-6Q2" secondAttribute="bottom" constant="90" id="weZ-A6-Jfc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="aboutSystemButton" destination="vKI-6v-luW" id="iX6-TC-KOj"/>
+                        <outlet property="exitButton" destination="4wd-RZ-4Fc" id="4d6-GC-EdY"/>
+                        <outlet property="minigamesButton" destination="YUt-xc-4hK" id="SAE-JH-BHP"/>
+                        <outlet property="userLabel" destination="X1K-MC-6Q2" id="HQ2-GY-vWf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47b-nk-G3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="23Y-89-UVE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="759" y="110"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="solarSystem" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="solar-system" translatesAutoresizingMaskIntoConstraints="NO" id="PwK-yX-OUl">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1550" y="109"/>
+            <point key="canvasLocation" x="757.60000000000002" y="109.29535232383809"/>
         </scene>
     </scenes>
     <resources>
         <image name="firstViewImage" width="1085" height="746"/>
-        <image name="solar-system" width="1080" height="1920"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
