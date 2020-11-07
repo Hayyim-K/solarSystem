@@ -8,6 +8,9 @@
 import UIKit
 
 class DataManager {
+   
+    static let shared = DataManager()
+    
     let names: [String] = [
         "Меркурий",
         "Венера",
@@ -36,8 +39,8 @@ class DataManager {
         1,
         0.107,
         318,
-        95,2
-        14.5
+        95.2,
+        14.5,
         17.2
     ]
     
@@ -62,4 +65,6 @@ class DataManager {
         26,
         13
     ]
+    
+    private init() {}
 }

@@ -13,22 +13,27 @@ struct Planet {
     let distanceToSun: Double
     let numberOfSatellite: Int
     
-    func getPlanets() -> [Planet] {
+    static func getPlanets() -> [Planet] {
         
-        let data = DataManager()
-        let names = data.names
-        let mass = data.mass
-        let radius = data.radius
-        let distanceToSun = data.distanceToSun
-        let numberOfSatellite = data.numberOfSatellite
+//        let data = DataManager()
+        let name = DataManager.shared.names
+        let mass = DataManager.shared.mass
+        let radius = DataManager.shared.radius
+        let distanceToSun = DataManager.shared.distanceToSun
+        let numberOfSatellite = DataManager.shared.numberOfSatellite
       
-        var planets = [Planet]()
-        for index in 0..<names.count {
-            planets.append(Planet(name: names[index],
-                                  mass: mass[index],
-                                  radius: radius[index],
-                                  distanceToSun: distanceToSun[index],
-                                  numberOfSatellite: numberOfSatellite[index]))
+        var planets: [Planet] = []
+        
+        for index in 0..<name.count {
+            let planet = Planet(
+                name: name[index],
+                mass: mass[index],
+                radius: radius[index],
+                distanceToSun: distanceToSun[index],
+                numberOfSatellite:
+                numberOfSatellite[index]
+            )
+            planets.append(planet)
         }
         return planets
     }

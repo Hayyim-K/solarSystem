@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vZj-c6-j8X">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,66 +8,239 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Solar system-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="solarSystem" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SolarSystemViewController" customModule="solarSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="solar-system" id="PwK-yX-OUl">
-                                <rect key="frame" x="-25" y="-51" width="424" height="743"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="150284-sinij-noch-chernyy-nebo-atmosfera-2048x1152" id="PwK-yX-OUl">
+                                <rect key="frame" x="0.0" y="0.0" width="415" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kcm-IL-ovI">
+                                <rect key="frame" x="159.5" y="60" width="95" height="727"/>
+                                <subviews>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTD-PV-dys">
+                                        <rect key="frame" x="12.5" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="RH2-jF-Ve3"/>
+                                            <constraint firstAttribute="width" secondItem="HTD-PV-dys" secondAttribute="height" multiplier="1:1" id="Xut-ff-ZKf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Нептун"/>
+                                        <connections>
+                                            <action selector="PlanetPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHN-p9-aW9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfJ-Kj-1Nt">
+                                        <rect key="frame" x="12.5" y="90" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FfJ-Kj-1Nt" secondAttribute="height" multiplier="1:1" id="5Wt-ky-hYC"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="Zaz-IJ-yst"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Уран"/>
+                                        <connections>
+                                            <action selector="PlanetPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VJf-Ou-Uz7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEk-hh-OLI">
+                                        <rect key="frame" x="0.0" y="180" width="95" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hEk-hh-OLI" secondAttribute="height" multiplier="1:1" id="XFk-Uj-Qqx"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="95" id="qdg-Fu-HK5"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Сатурн"/>
+                                        <connections>
+                                            <action selector="PlanetPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nyJ-9Q-YCQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDA-Xt-Lmy">
+                                        <rect key="frame" x="17.5" y="295" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="o9t-NE-8Yy"/>
+                                            <constraint firstAttribute="width" secondItem="VDA-Xt-Lmy" secondAttribute="height" multiplier="1:1" id="okA-HE-mMF"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Марс"/>
+                                        <connections>
+                                            <action selector="PlanetPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RGo-OI-UJq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXq-2P-4MH">
+                                        <rect key="frame" x="1.5" y="375" width="92" height="92"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="CXq-2P-4MH" secondAttribute="height" multiplier="1:1" id="Thu-cl-y0k"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="92" id="zVt-qs-o2i"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Юпитер"/>
+                                        <connections>
+                                            <action selector="PlanetPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpJ-Nq-JaY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1H-ze-Grq">
+                                        <rect key="frame" x="12.5" y="487" width="70" height="70"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Земля"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="8B8-Wd-AFK"/>
+                                            <constraint firstAttribute="width" secondItem="N1H-ze-Grq" secondAttribute="height" multiplier="1:1" id="tux-Dd-0dE"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Земля"/>
+                                        <connections>
+                                            <action selector="PlanetPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7U-oS-Yrb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qv-rF-73L">
+                                        <rect key="frame" x="7.5" y="577" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9qv-rF-73L" secondAttribute="height" multiplier="1:1" id="mV8-ki-Y7S"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="qL6-5Z-mZO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Венера"/>
+                                        <connections>
+                                            <action selector="PlanetPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="svP-hL-WkC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qni-3m-e3d">
+                                        <rect key="frame" x="22.5" y="677" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="pub-CO-wqx"/>
+                                            <constraint firstAttribute="width" secondItem="qni-3m-e3d" secondAttribute="height" multiplier="1:1" id="ygm-cD-6Lq"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Меркурий"/>
+                                        <connections>
+                                            <action selector="PlanetPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHm-tp-ilB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kcm-IL-ovI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D2y-GL-L9h"/>
+                            <constraint firstItem="kcm-IL-ovI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="hN1-DX-lh0"/>
+                            <constraint firstItem="kcm-IL-ovI" firstAttribute="height" secondItem="PwK-yX-OUl" secondAttribute="height" multiplier="0.811384" id="iEe-2R-1RX"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="bvu-Nn-XfV"/>
+                    <tabBarItem key="tabBarItem" title="Solar system" image="sun.max" catalog="system" id="bvu-Nn-XfV"/>
                     <navigationItem key="navigationItem" id="Jfr-DT-rbO"/>
+                    <connections>
+                        <segue destination="b5n-1t-egc" kind="presentation" identifier="AboutPlanet" modalPresentationStyle="fullScreen" id="cju-wR-liK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3660" y="-290.10494752623691"/>
         </scene>
-        <!--Item-->
+        <!--Mini games-->
         <scene sceneID="dSe-32-Gfx">
             <objects>
                 <viewController id="SPA-lr-LSu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FvC-6d-9e9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="QhZ-gn-p9m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Z9D-tO-Ndh"/>
+                    <tabBarItem key="tabBarItem" title="Mini games" image="gamecontroller" catalog="system" id="Z9D-tO-Ndh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v88-dR-cya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3660.8695652173915" y="455.35714285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--About Planet View Controller-->
         <scene sceneID="bAb-Cx-1wF">
             <objects>
-                <viewController id="b5n-1t-egc" sceneMemberID="viewController">
+                <viewController id="b5n-1t-egc" customClass="AboutPlanetViewController" customModule="solarSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CAf-KP-4aX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="150284-sinij-noch-chernyy-nebo-atmosfera-2048x1152" id="bXo-Ay-G0X">
+                                <rect key="frame" x="-1" y="0.0" width="415" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OIc-Fu-QsD">
+                                <rect key="frame" x="129" y="213" width="156" height="470"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Венера" translatesAutoresizingMaskIntoConstraints="NO" id="AJI-UK-LbV">
+                                        <rect key="frame" x="0.0" y="0.0" width="156" height="220"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="faY-zg-Nj9">
+                                        <rect key="frame" x="3" y="250" width="150" height="220"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfr-tz-VLw">
+                                                <rect key="frame" x="36.5" y="0.0" width="77" height="36"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KB4-zg-av7">
+                                                <rect key="frame" x="49.5" y="46" width="51" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fen-ha-jYe">
+                                                <rect key="frame" x="43" y="92" width="64.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance to Sun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfh-xr-dGV">
+                                                <rect key="frame" x="0.0" y="138" width="150" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sputnic count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pan-6r-Ikc">
+                                                <rect key="frame" x="9" y="184" width="132" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Iy-Gk-UoF">
+                                <rect key="frame" x="176" y="802" width="62" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="b5n-1t-egc" eventType="touchUpInside" id="ECF-65-9fB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Gy1-84-5Vm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OIc-Fu-QsD" firstAttribute="centerY" secondItem="CAf-KP-4aX" secondAttribute="centerY" id="1M9-PQ-sP4"/>
+                            <constraint firstItem="OIc-Fu-QsD" firstAttribute="centerX" secondItem="CAf-KP-4aX" secondAttribute="centerX" id="1x5-UQ-gvr"/>
+                            <constraint firstItem="Gy1-84-5Vm" firstAttribute="bottom" secondItem="6Iy-Gk-UoF" secondAttribute="bottom" constant="18" id="5BB-cf-XpR"/>
+                            <constraint firstItem="6Iy-Gk-UoF" firstAttribute="centerX" secondItem="CAf-KP-4aX" secondAttribute="centerX" id="w5I-oR-Jiu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="distanceToSunLabel" destination="Mfh-xr-dGV" id="euJ-PT-TQh"/>
+                        <outlet property="numberOfSatellitesLabel" destination="pan-6r-Ikc" id="jHE-8E-dx3"/>
+                        <outlet property="planetImageView" destination="AJI-UK-LbV" id="r9Q-4Q-idG"/>
+                        <outlet property="planetMassLabel" destination="KB4-zg-av7" id="bSv-42-RHE"/>
+                        <outlet property="planetNameLabel" destination="Xfr-tz-VLw" id="0us-aq-dbj"/>
+                        <outlet property="planetRadiusLabel" destination="Fen-ha-jYe" id="j24-lh-kBG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozb-T3-H5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4534.7826086956529" y="77.678571428571431"/>
+            <point key="canvasLocation" x="4493" y="-291"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LlN-zZ-c0b">
             <objects>
                 <viewController id="Vxw-1r-M1O" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W9o-Xw-Bov">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="7if-U0-F6W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,7 +255,7 @@
             <objects>
                 <viewController id="GrE-qU-LCW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sBK-jg-Xsf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="RL6-nU-05u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,7 +270,7 @@
             <objects>
                 <viewController id="Y6R-8J-KLX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="19U-fU-Jtw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="gLt-1t-E7q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,7 +285,7 @@
             <objects>
                 <viewController id="8g5-bD-yv7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sr7-WR-f0y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="5tK-fT-J5q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -123,12 +296,13 @@
             </objects>
             <point key="canvasLocation" x="1976.8115942028987" y="77.678571428571431"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Solar System Tab Bar Controller-->
         <scene sceneID="GK1-cn-vAs">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vZj-c6-j8X" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vZj-c6-j8X" customClass="SolarSystemTabBarController" customModule="solarSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wpv-tJ-iXu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -147,7 +321,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NOb-4N-hwy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ac8-hW-4l7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -161,7 +335,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="solar-system" width="1080" height="1920"/>
+        <image name="150284-sinij-noch-chernyy-nebo-atmosfera-2048x1152" width="1152" height="2048"/>
+        <image name="gamecontroller" catalog="system" width="128" height="80"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
+        <image name="Венера" width="156" height="156"/>
+        <image name="Земля" width="133" height="134"/>
+        <image name="Марс" width="110" height="110"/>
+        <image name="Меркурий" width="65" height="67"/>
+        <image name="Нептун" width="148" height="150"/>
+        <image name="Сатурн" width="230" height="216"/>
+        <image name="Уран" width="152" height="153"/>
+        <image name="Юпитер" width="201" height="204"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
