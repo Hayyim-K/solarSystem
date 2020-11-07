@@ -31,6 +31,49 @@
             </objects>
             <point key="canvasLocation" x="3660" y="-290.10494752623691"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="RTf-eA-ojC">
+            <objects>
+                <viewController id="3Xn-yk-lJ0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LEE-WD-aAF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="solar-system" id="o52-Ld-CUO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Поздравляем USER!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu1-jF-d0b">
+                                <rect key="frame" x="16" y="70" width="343" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.32764340753424659" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAc-AI-ZnB">
+                                <rect key="frame" x="16" y="158" width="343" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.32764340749999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Ты заработал 100 баллов!">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Pb-88-kXi"/>
+                        <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16C-ef-wH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5261.6000000000004" y="44.527736131934034"/>
+        </scene>
         <!--Item-->
         <scene sceneID="dSe-32-Gfx">
             <objects>
@@ -46,66 +89,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v88-dR-cya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3660.8695652173915" y="455.35714285714283"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="bAb-Cx-1wF">
-            <objects>
-                <viewController id="b5n-1t-egc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CAf-KP-4aX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Gy1-84-5Vm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ozb-T3-H5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4534.7826086956529" y="77.678571428571431"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="LlN-zZ-c0b">
-            <objects>
-                <viewController id="Vxw-1r-M1O" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="W9o-Xw-Bov">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="7if-U0-F6W"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvm-5U-dP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5371.0144927536239" y="77.678571428571431"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ETd-gN-Pim">
-            <objects>
-                <viewController id="GrE-qU-LCW" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sBK-jg-Xsf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="RL6-nU-05u"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xPa-2Y-ubn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6208.6956521739139" y="77.678571428571431"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="1YB-7x-FpA">
-            <objects>
-                <viewController id="Y6R-8J-KLX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="19U-fU-Jtw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="gLt-1t-E7q"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qaM-jL-aaO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7097.1014492753629" y="77.678571428571431"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dbx-cU-Kzx">
@@ -162,8 +145,14 @@
     </scenes>
     <resources>
         <image name="solar-system" width="1080" height="1920"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

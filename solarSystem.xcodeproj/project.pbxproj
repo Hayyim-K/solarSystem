@@ -62,13 +62,13 @@
 			children = (
 				6F38B4FD2555436C002AD957 /* PlanetModel.swift */,
 				6F38B4F5255540B3002AD957 /* DataManager.swift */,
-				6F38B4E025553C7A002AD957 /* AppDelegate.swift */,
-				6F38B4E225553C7A002AD957 /* SceneDelegate.swift */,
 				6F38B4E425553C7A002AD957 /* ViewController.swift */,
 				6F38B4E625553C7B002AD957 /* Main.storyboard */,
 				6F38B4E925553C80002AD957 /* Assets.xcassets */,
 				6F38B4EB25553C80002AD957 /* LaunchScreen.storyboard */,
 				6F38B4EE25553C80002AD957 /* Info.plist */,
+				6F38B4E025553C7A002AD957 /* AppDelegate.swift */,
+				6F38B4E225553C7A002AD957 /* SceneDelegate.swift */,
 			);
 			path = solarSystem;
 			sourceTree = "<group>";
