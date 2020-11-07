@@ -15,8 +15,8 @@
 		6F38B4ED25553C80002AD957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F38B4EB25553C80002AD957 /* LaunchScreen.storyboard */; };
 		6F38B4F6255540B3002AD957 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38B4F5255540B3002AD957 /* DataManager.swift */; };
 		6F38B4FE2555436C002AD957 /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38B4FD2555436C002AD957 /* PlanetModel.swift */; };
-		9599525C25564AB000ADD650 /* testKate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599525B25564AB000ADD650 /* testKate.swift */; };
-		9599525F25566FD300ADD650 /* test_two.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599525E25566FD300ADD650 /* test_two.swift */; };
+		9599526325567D1300ADD650 /* Main_kate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9599526125567D1300ADD650 /* Main_kate.storyboard */; };
+		95995269255682FC00ADD650 /* ViewControllerKate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95995268255682FC00ADD650 /* ViewControllerKate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		6F38B4EE25553C80002AD957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F38B4F5255540B3002AD957 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6F38B4FD2555436C002AD957 /* PlanetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
-		9599525B25564AB000ADD650 /* testKate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testKate.swift; sourceTree = "<group>"; };
-		9599525E25566FD300ADD650 /* test_two.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_two.swift; sourceTree = "<group>"; };
+		9599526225567D1300ADD650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = solarSystem/Base.lproj/Main_kate.storyboard; sourceTree = "<group>"; };
+		95995268255682FC00ADD650 /* ViewControllerKate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerKate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,15 +66,15 @@
 		6F38B4DF25553C7A002AD957 /* solarSystem */ = {
 			isa = PBXGroup;
 			children = (
+				9599526125567D1300ADD650 /* Main_kate.storyboard */,
 				6F38B4E025553C7A002AD957 /* AppDelegate.swift */,
 				6F38B4E225553C7A002AD957 /* SceneDelegate.swift */,
 				6F38B4E425553C7A002AD957 /* ViewController.swift */,
+				95995268255682FC00ADD650 /* ViewControllerKate.swift */,
 				6F38B4E625553C7B002AD957 /* Main.storyboard */,
-				9599525B25564AB000ADD650 /* testKate.swift */,
 				6F38B4E925553C80002AD957 /* Assets.xcassets */,
 				6F38B4EB25553C80002AD957 /* LaunchScreen.storyboard */,
 				6F38B4EE25553C80002AD957 /* Info.plist */,
-				9599525E25566FD300ADD650 /* test_two.swift */,
 			);
 			path = solarSystem;
 			sourceTree = "<group>";
@@ -136,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9599526325567D1300ADD650 /* Main_kate.storyboard in Resources */,
 				6F38B4ED25553C80002AD957 /* LaunchScreen.storyboard in Resources */,
 				6F38B4EA25553C80002AD957 /* Assets.xcassets in Resources */,
 				6F38B4E825553C7B002AD957 /* Main.storyboard in Resources */,
@@ -151,11 +152,10 @@
 			files = (
 				6F38B4FE2555436C002AD957 /* PlanetModel.swift in Sources */,
 				6F38B4E525553C7A002AD957 /* ViewController.swift in Sources */,
-				9599525C25564AB000ADD650 /* testKate.swift in Sources */,
 				6F38B4F6255540B3002AD957 /* DataManager.swift in Sources */,
+				95995269255682FC00ADD650 /* ViewControllerKate.swift in Sources */,
 				6F38B4E125553C7A002AD957 /* AppDelegate.swift in Sources */,
 				6F38B4E325553C7A002AD957 /* SceneDelegate.swift in Sources */,
-				9599525F25566FD300ADD650 /* test_two.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +176,14 @@
 				6F38B4EC25553C80002AD957 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9599526125567D1300ADD650 /* Main_kate.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9599526225567D1300ADD650 /* Base */,
+			);
+			name = Main_kate.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -312,7 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = b2banalytica.solarSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -331,7 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = b2banalytica.solarSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
